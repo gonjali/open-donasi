@@ -1,0 +1,1331 @@
+/* ============================================
+   CONTAINER UTAMA
+   ============================================ */
+.pinuspintar-container {
+  min-height: 100vh;
+  background: #f9fafb;
+  color: #1f2937;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================
+   HEADER / NAVIGASI
+   ============================================ */
+.header {
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  color: #2563eb;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  color: #1f2937;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  font-family: inherit;
+  border-radius: 6px;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+  background: #f3f4f6;
+}
+
+.nav-link:active {
+  background: #e5e7eb;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background: #f3f4f6;
+  color: #1f2937;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.search-btn:hover {
+  background: #e5e7eb;
+}
+
+.login-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #1d4ed8;
+}
+
+.back-btn-mobile {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background: #f3f4f6;
+  color: #1f2937;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.back-btn-mobile:hover {
+  background: #e5e7eb;
+}
+
+/* ============================================
+   HERO SECTION (Bagian Atas dengan Judul)
+   ============================================ */
+   .hero-section {
+    padding:  60px 20px;
+    max-width: 910px;
+    color: hsl(136, 38%, 92%);
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 720px;
+    color: hsl(135, 86%, 52%);
+    margin: 0 auto;
+  }
+  
+  .hero-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: hsl(117, 55%, 57%);
+    margin-bottom: 2px;
+    letter-spacing: 0.5px;
+  }
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 0.25rem 0;
+  color: #111827; /* hitam gelap untuk teks Donasi Sekarang */
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: #6b7280;
+  margin: 0;
+  max-width: 65ch;
+  color: hsl(140, 3%, 23%);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.25rem;
+}
+
+/* ============================================
+   DONATION SECTION (Bagian Kartu Donasi)
+   ============================================ */
+.donation-section {
+  padding: 1px 1px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.donation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.donation-header-left {
+  flex: 1;
+}
+
+.sort-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  color: #1f2937;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sort-btn:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+/* Grid untuk menampilkan kartu donasi */
+.donation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ============================================
+   DONATION CARD (Kartu Donasi)
+   ============================================ */
+.donation-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  user-select: none;
+}
+
+.donation-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.donation-card:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.donation-category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #f97316;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  text-align: center;
+}
+
+.donation-logo {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 40px;
+  height: 40px;
+  z-index: 3;
+  background: white;
+  border-radius: 8px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.donation-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) contrast(1.5);
+}
+
+.donation-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: #f3f4f6;
+}
+
+.donation-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.donation-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  color: #9ca3af;
+}
+
+.donation-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.donation-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.donation-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.donation-progress {
+  margin: 0.5rem 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.donation-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.donation-amount {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.donation-days {
+  color: #6b7280;
+}
+
+.donation-organizer {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+/* Kartu foto standar - semua foto memiliki ukuran yang sama */
+.photo-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 3/4;
+  max-height: 350px;
+  min-height: 280px;
+}
+
+/* Semua foto memiliki ukuran yang sama dengan foto pertama */
+.photo-grid .photo-card:nth-child(n) {
+  aspect-ratio: 3/4 !important;
+  max-height: 350px !important;
+  min-height: 280px !important;
+}
+
+/* ============================================
+   PROFILE CARD (Kartu Profil Mentor)
+   ============================================ */
+/* Wrapper untuk kartu profil dan caption */
+.profile-card-wrapper {
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Wrapper untuk foto galeri dengan caption yang selalu terlihat */
+.photo-card-wrapper-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Kartu foto profil mentor */
+.profile-card {
+  aspect-ratio: 3/4;
+  max-height: 350px;
+  min-height: 280px;
+}
+
+.profile-image {
+  object-position: center top;
+}
+
+.profile-caption {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.profile-caption::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 50%, #fbbf24 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.profile-caption:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(251, 191, 36, 0.4);
+}
+
+.profile-header {
+  margin-bottom: 0.875rem;
+}
+
+.profile-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(251, 191, 36, 0.6);
+  }
+}
+
+.profile-icon {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.5px;
+}
+
+.profile-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(245, 158, 11, 0.2) 100%);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  margin-top: 0.5rem;
+}
+
+.badge-icon {
+  font-size: 1.125rem;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.profile-role {
+  font-size: 0.75rem;
+  color: #fbbf24;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+.profile-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #fbbf24 50%, transparent 100%);
+  margin: 1.5rem auto;
+  border-radius: 2px;
+}
+
+.profile-quote-wrapper {
+  position: relative;
+  padding: 0.875rem 0;
+  margin: 0.875rem 0;
+}
+
+.quote-mark {
+  position: absolute;
+  font-size: 5rem;
+  color: #fbbf24;
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.quote-mark-left {
+  top: -0.5rem;
+  left: -0.5rem;
+}
+
+.quote-mark-right {
+  bottom: -2rem;
+  right: -0.5rem;
+  transform: rotate(180deg);
+}
+
+.profile-description {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 auto;
+  font-style: italic;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  max-width: 60ch;
+}
+
+.profile-signature {
+  margin-top: 1rem;
+  padding-top: 0.875rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.signature-line {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #fbbf24 50%, transparent 100%);
+}
+
+.signature-text {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.photo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  gap: 1rem;
+}
+
+.photo-placeholder p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), transparent);
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.photo-card:hover .photo-overlay {
+  transform: translateY(0);
+}
+
+.overlay-photo-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(251, 191, 36, 0.8);
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: overlayPhotoPulse 2s ease-in-out infinite;
+}
+
+@keyframes overlayPhotoPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(251, 191, 36, 0.7);
+  }
+}
+
+.overlay-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.photo-caption {
+  margin: 0;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  line-height: 1.4;
+}
+
+/* Caption yang selalu terlihat di bawah foto */
+.photo-caption-visible {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+}
+
+/* ============================================
+   STORY SECTION (Bagian Cerita/Kisah)
+   ============================================ */
+.story-section {
+  padding: 1.5rem 2rem;
+  max-width: 900px;
+  margin: 1.5rem auto;
+  background: #f9fafb;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+.story-content {
+  width: 100%;
+}
+
+.story-header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.story-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #1f2937;
+  line-height: 1.3;
+}
+
+.story-icon {
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+.story-logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: brightness(0) contrast(1.2);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.story-text {
+  font-size: 1.125rem;
+  line-height: 1.9;
+  color: #374151;
+  max-width: 65ch;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-paragraph {
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.story-paragraph strong {
+  color: #2b69e5;
+  font-weight: 700;
+}
+
+.story-paragraph:last-of-type {
+  margin-bottom: 1.25rem;
+}
+
+.highlight-text {
+  background: #eff6ff;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 4px solid #2563eb;
+  margin-top: 1.25rem !important;
+  text-align: center;
+}
+
+.story-quote {
+  background: white;
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin: 1.25rem 0;
+  border: 1px solid #e5e7eb;
+  position: relative;
+  text-align: center;
+}
+
+.quote-icon {
+  font-size: 4rem;
+  color: #2563eb;
+  line-height: 1;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.quote-text {
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: #374151;
+  margin: 0 0 1rem 0;
+  font-weight: 500;
+}
+
+.quote-author {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.story-cta {
+  text-align: center;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.story-cta-text {
+  font-size: 1.25rem;
+  color: #374151;
+  margin: 0 0 1.5rem 0;
+  font-weight: 600;
+}
+
+.btn-story-donate {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 1.25rem 3rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.btn-story-donate:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.6);
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+.btn-story-donate:active {
+  transform: translateY(-1px);
+}
+
+.btn-story-donate:focus {
+  outline: 2px solid #ef4444;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   CTA SECTION (Call to Action - Ajakan Donasi)
+   ============================================ */
+.cta-section {
+  padding: 1.5rem 2rem;
+  background: #f9fafb;
+  margin: 1.5rem 0;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #1f2937;
+}
+
+.cta-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #6b7280;
+  margin: 0 0 2rem 0;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-donate,
+.btn-share {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-donate {
+  background: #4ade80;
+  color: white;
+  box-shadow: 0 4px 14px rgba(74, 222, 128, 0.4);
+}
+
+.btn-donate:hover {
+  background: #22c55e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 222, 128, 0.5);
+}
+
+.btn-share {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-share:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   STATS SECTION (Bagian Statistik)
+   ============================================ */
+.stats-section {
+  padding: 2rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+  justify-items: center;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 160px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: #2563eb;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #2563eb;
+  margin: 0 0 0.75rem 0;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+/* Tablet dan layar kecil (max-width: 768px) */
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+  
+  .back-btn-mobile {
+    display: flex;
+  }
+  
+  .header-actions .search-btn,
+  .header-actions .login-btn {
+    display: none;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .donation-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.75rem 1.25rem;
+    min-height: 150px;
+    max-width: 100%;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.95rem;
+  }
+  
+  .story-section {
+    padding: 1.25rem 1.5rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .story-title {
+    font-size: 2rem;
+  }
+  
+  .story-text {
+    font-size: 1rem;
+  }
+  
+  .quote-text {
+    font-size: 1.125rem;
+  }
+  
+  .story-quote {
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+  }
+  
+  .btn-story-donate {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .profile-caption {
+    padding: 1.25rem 1rem;
+  }
+  
+  .profile-icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .profile-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .profile-name {
+    font-size: 1.5rem;
+  }
+  
+  .profile-badge {
+    padding: 0.4rem 1rem;
+  }
+  
+  .profile-role {
+    font-size: 0.7rem;
+  }
+  
+  .profile-description {
+    font-size: 0.9rem;
+  }
+  
+  .quote-mark {
+    font-size: 4rem;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .header-content {
+    padding: 1rem;
+  }
+  
+  .hero-section,
+  .donation-section,
+  .cta-section,
+  .stats-section {
+    padding: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .donation-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .btn-donate,
+  .btn-share {
+    width: 100%;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+    min-height: 140px;
+    border-radius: 16px;
+    max-width: 100%;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+  
+  .story-section {
+    padding: 1.25rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 16px;
+  }
+  
+  .story-title {
+    font-size: 1.75rem;
+  }
+  
+  .story-paragraph {
+    text-align: left;
+    font-size: 0.95rem;
+  }
+  
+  .highlight-text {
+    padding: 1rem;
+  }
+  
+  .story-quote {
+    padding: 1rem 0.875rem;
+    margin: 1rem 0;
+  }
+  
+  .quote-text {
+    font-size: 1rem;
+  }
+  
+  .quote-icon {
+    font-size: 3rem;
+  }
+  
+  .story-cta-text {
+    font-size: 1.125rem;
+  }
+  
+  .btn-story-donate {
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+  
+  .profile-caption {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+  }
+  
+  .profile-icon-wrapper {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .profile-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .profile-name {
+    font-size: 1.25rem;
+  }
+  
+  .profile-badge {
+    padding: 0.35rem 0.875rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .badge-icon {
+    font-size: 0.9rem;
+  }
+  
+  .profile-role {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+  
+  .profile-divider {
+    width: 50px;
+    margin: 1.25rem auto;
+  }
+  
+  .profile-quote-wrapper {
+    padding: 1.25rem 0;
+    margin: 1.25rem 0;
+  }
+  
+  .quote-mark {
+    font-size: 3.5rem;
+  }
+  
+  .quote-mark-left {
+    top: -0.25rem;
+    left: -0.25rem;
+  }
+  
+  .quote-mark-right {
+    bottom: -1.5rem;
+    right: -0.25rem;
+  }
+  
+  .profile-description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+  
+  .profile-signature {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+  }
+  
+  .signature-text {
+    font-size: 0.875rem;
+  }
+}
