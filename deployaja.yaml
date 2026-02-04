@@ -1,0 +1,16 @@
+name: open-donasi
+description: open donasi
+container:
+    image: ghcr.io/gonjali/open-donasi:latest
+    port: 3000
+resources:
+    cpu: 1000m
+    memory: 1Gi
+    replicas: 1
+env:
+    - name: NODE_ENV
+      value: production
+      userManaged: false
+    - name: LOG_LEVEL
+      value: info
+      userManaged: false
