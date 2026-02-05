@@ -7,9 +7,9 @@ on:
     branches: [ "main" ]
 
 env:
-  REGISTRY: ghcr.io/gonjali/open-donasi
+  REGISTRY: ghcr.io
   GH_REGISTRY: ghcr.io
-  IMAGE_NAME: open-donasi
+  IMAGE_NAME: gonjali/open-donasi
   DOCKER_BUILDKIT: 1
 
 jobs:
