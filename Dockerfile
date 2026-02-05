@@ -7,9 +7,8 @@ RUN npm run build
 
 FROM node:20-alpine
 WORKDIR /app
-COPY --from=builder /app/build build/
-COPY --from=builder /app/node_modules node_modules/
-COPY package.json .
+RUN npm i -g serve
+COPY --from=builder /app/dist dist/
 EXPOSE 3000
 ENV NODE_ENV=production
-CMD [ "node", "build/index.js" ]
+CMD [ "serve", "-s", "dist", "-l", "3000" ]
